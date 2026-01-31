@@ -1,0 +1,147 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Tailwind for basic resets */
+@import "tailwindcss";
+
+/* Theme Variables */
+:root {
+  --bg-main: #0a0a0f;
+  --bg-gradient-overlay: linear-gradient(180deg, #0a0a0f 0%, #0f0f1a 100%);
+  --text-main: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.05);
+  --bg-input: rgba(255, 255, 255, 0.03);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --orb-opacity: 0.3;
+}
+
+[data-theme='light'] {
+  --bg-main: #f8fafc;
+  --bg-gradient-overlay: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+  --text-main: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.9);
+  --bg-input: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow-color: rgba(99, 102, 241, 0.1);
+  --orb-opacity: 0.15;
+}
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Background Animated Orbs */
+.bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--bg-gradient-overlay);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { 
+  background: linear-gradient(to bottom, #6366f1, #8b5cf6); 
+  border-radius: 10px; 
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--text-main) !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: var(--text-main);
+}
+
+/* --- RESPONSIVE UTILITIES --- */
+
+/* Responsive Layout for UserForm and other split layouts */
+.responsive-flex {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .responsive-flex {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  .tab-button span { display: none; } /* Hide labels on very small tabs if needed, but not yet */
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem !important; }
+  .main-content { padding: 24px 16px !important; }
+  .nav-container { padding: 4px !important; }
+  .tab-button { padding: 10px 12px !important; }
+}
