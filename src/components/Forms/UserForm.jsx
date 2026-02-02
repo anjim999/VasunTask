@@ -12,7 +12,7 @@ const UserForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', id: '', password: '' });
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
-  const [submissions, setSubmissions] = useLocalStorage('user-submissions', DEFAULT_SUBMISSIONS);
+  const [submissions, setSubmissions] = useLocalStorage('user-submissions-v1', DEFAULT_SUBMISSIONS);
   const [editingId, setEditingId] = useState(null);
 
   const validate = () => {

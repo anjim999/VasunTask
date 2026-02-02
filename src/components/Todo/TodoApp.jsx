@@ -16,7 +16,7 @@ const DEFAULT_TASKS = [
 ];
 
 const TodoApp = () => {
-  const [tasks, setTasks] = useLocalStorage('todo-tasks', DEFAULT_TASKS);
+  const [tasks, setTasks] = useLocalStorage('todo-tasks-v1', DEFAULT_TASKS);
   const [inputValue, setInputValue] = useState('');
   const [priority, setPriority] = useState('medium');
   const [filter, setFilter] = useState('all');
