@@ -2,12 +2,13 @@ import { useState, useMemo } from 'react';
 import { Search, X } from 'lucide-react';
 
 const NAMES = [
-  'Alexander Hamilton', 'Benjamin Franklin', 'Catherine the Great', 'Diana Ross',
-  'Eleanor Roosevelt', 'Franklin Roosevelt', 'George Washington', 'Hannah Montana',
-  'Isabella Garcia', 'James Madison', 'Katherine Johnson', 'Leonardo da Vinci',
-  'Marie Curie', 'Napoleon Bonaparte', 'Oprah Winfrey', 'Pablo Picasso',
-  'Queen Elizabeth', 'Rosa Parks', 'Stephen Hawking', 'Thomas Edison',
-  'Ulysses S. Grant', 'Vincent van Gogh', 'William Shakespeare', 'Xavier Charles'
+  'Aarav Patel', 'Aditi Sharma', 'Alexander Hamilton', 'Ananya Gupta', 'Arjun Singh',
+  'Benjamin Franklin', 'Deepika Padukone', 'Diya Krishnan', 'Eleanor Roosevelt',
+  'Ishaan Verma', 'Kavya Reddy', 'Leonardo da Vinci', 'Marie Curie', 
+  'Meera Iyer', 'Mohammed Khan', 'Neha Malhotra', 'Priya Venkatesh',
+  'Rahul Dravid', 'Riya Kapoor', 'Rohan Mehta', 'Sanya Mirchandani',
+  'Sara Ali Khan', 'Stephen Hawking', 'Tanvi Saxena', 'Thomas Edison',
+  'Varun Dhawan', 'Vihaan Das', 'William Shakespeare', 'Zara Sheikh'
 ];
 
 const SearchList = () => {
