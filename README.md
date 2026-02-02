@@ -3,7 +3,7 @@
 [![React](https://img.shields.io/badge/React-18.x-blue?logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.x-yellow?logo=vite)](https://vitejs.dev/)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?logo=vercel)](https://vasun-task.vercel.app/)
 
 A high-performance, responsive React application showcasing modular component architecture, complex state management, and custom persistence hooks. Built specifically for the **Vasundharaa Geo Technologies** Internship Assignment.
 
@@ -103,6 +103,4 @@ src/
 └── main.jsx            # Entry point
 ```
 
----
 
-**Developed for technical evaluation by [Your Name].**
