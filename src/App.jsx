@@ -63,7 +63,6 @@ function App() {
               VasunTask
             </h1>
           </div>
-          <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.9rem, 3vw, 1.1rem)' }}>Vasundharaa Geo Technologies Assignment</p>
         </header>
 
         <nav style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
