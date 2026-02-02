@@ -5,6 +5,10 @@
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?logo=vercel)](https://vasun-task.vercel.app/)
 
+## 🔗 Live Demo
+
+**Deployment URL:** [https://vasun-task.vercel.app/](https://vasun-task.vercel.app/)
+
 A high-performance, responsive React application showcasing modular component architecture, complex state management, and custom persistence hooks. Built specifically for the **Vasundharaa Geo Technologies** Internship Assignment.
 
 ---
