@@ -8,8 +8,15 @@ const PRIORITIES = {
   low: { label: 'Low', emoji: '🟢', color: '#22c55e', bg: 'rgba(34, 197, 94, 0.2)', border: 'rgba(34, 197, 94, 0.3)' }
 };
 
+const DEFAULT_TASKS = [
+  { id: 1706782400001, text: 'Review quarterly performance metrics', completed: false, priority: 'high' },
+  { id: 1706782400002, text: 'Update client asset inventory', completed: true, priority: 'medium' },
+  { id: 1706782400003, text: 'Team sync at 10:00 AM', completed: false, priority: 'medium' },
+  { id: 1706782400004, text: 'Finalize UX audit report', completed: false, priority: 'low' }
+];
+
 const TodoApp = () => {
-  const [tasks, setTasks] = useLocalStorage('todo-tasks', []);
+  const [tasks, setTasks] = useLocalStorage('todo-tasks', DEFAULT_TASKS);
   const [inputValue, setInputValue] = useState('');
   const [priority, setPriority] = useState('medium');
   const [filter, setFilter] = useState('all');

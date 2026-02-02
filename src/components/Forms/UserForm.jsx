@@ -2,11 +2,17 @@ import { useState } from 'react';
 import { User, Mail, CreditCard, Lock, Eye, EyeOff, CheckCircle2, Send, Clock, Trash2, Edit3, X } from 'lucide-react';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
+const DEFAULT_SUBMISSIONS = [
+  { recordId: 1706782400010, name: 'Alice Johnson', email: 'alice.j@corp.com', id: 'USR-8812', password: 'hashed_password', date: '9:30 AM', lastEdited: null },
+  { recordId: 1706782400011, name: 'Mark Evans', email: 'mark.evans@tech.io', id: 'USR-9923', password: 'hashed_password', date: '11:15 AM', lastEdited: '11:45 AM' },
+  { recordId: 1706782400012, name: 'Sarah Connor', email: 's.connor@sky.net', id: 'USR-1001', password: 'hashed_password', date: '2:00 PM', lastEdited: null }
+];
+
 const UserForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', id: '', password: '' });
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
-  const [submissions, setSubmissions] = useLocalStorage('user-submissions', []);
+  const [submissions, setSubmissions] = useLocalStorage('user-submissions', DEFAULT_SUBMISSIONS);
   const [editingId, setEditingId] = useState(null);
 
   const validate = () => {
